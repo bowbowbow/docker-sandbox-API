@@ -34,7 +34,7 @@ HOST = ''
 PORT = 3000
 
 #IP blocking activation
-ipBlock = True
+ipBlock = False
 
 if len(sys.argv) >= 2:
     PORT = int(sys.argv[1])
@@ -71,6 +71,7 @@ logger.addHandler(consoleHandler)
 
 conn = None
 
+print('Server is running..')
 while True:
     s.listen(5) #maximum number of queued connections
 
